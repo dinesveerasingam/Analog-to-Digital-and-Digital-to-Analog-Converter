@@ -1,48 +1,80 @@
 # Analog-to-Digital-and-Digital-to-Analog-Converter
-In Task 1, a complete 2-bit Analog-to-Digital (ADC) and Digital-to-Analog (DAC) conversion chain was designed, simulated, and tested on a breadboard. The system includes all major signal-processing stages required in a practical data-conversion pipeline.
-🔧 System Overview
-The AD/DA system was developed with the following major components:
-•	4th-Order Butterworth Low-Pass Filters (LPF)
-Used at both the input (anti-aliasing filter) and output (reconstruction filter) stages.
-These unity-gain Butterworth filters ensure:
-o	Flat passband response
-o	No ripple
-o	Smooth signal reconstruction
-o	Effective reduction of high-frequency noise and aliasing
-•	Sample-and-Hold Circuit
-Captures and holds the analog input signal for stable conversion during each clock cycle.
-•	Comparator-based 2-bit ADC
-Implemented using LM358P op-amps and discrete comparators to generate 2-bit digital output levels.
-•	Resistor-based DAC (R-2R Ladder / Weighted Resistor Network)
-Converts the 2-bit digital signal back into an analog output.
-•	Reconstruction Filter (4th-order Butterworth LPF)
-Smoothens the DAC output and removes stair-step behavior.
 
-📈 Adaptive Peak Detection
-To improve system accuracy, an adaptive peak detection algorithm was implemented using op-amp rectifiers and peak-hold capacitive circuits.
-This resulted in:
-•	More stable digital level transitions
-•	Reduced error in 2-bit quantization
-•	Better reconstruction quality after the DAC stage
 
-🛠️ Components Used
-•	LM358P operational amplifiers
-•	4th-order unity-gain Butterworth filters
-•	MOSFET switching elements
-•	Comparators
-•	Weighted-resistor DAC or R-2R DAC
-•	Peak detector circuits
+This task focuses on building a complete **2-bit Analog-to-Digital (ADC) and Digital-to-Analog (DAC)** system using practical analog components. The design includes filtering, sampling, conversion, and signal reconstruction, verified through both simulation and hardware testing
 
-🧪 Verification & Testing
-The full system was tested using:
-•	Simulation (LTspice/Multisim/Proteus)
-— Verified frequency response, sampling behavior, comparators, and DAC levels.
-•	Breadboard Implementation
-— Validated real-world signal flow
-— Measured ADC thresholds and DAC output
-— Ensured filter behavior matched design targets
-📌 Outcome
-Task 1 successfully demonstrated a fully functional 2-bit AD/DA conversion system with practical filtering, sampling, conversion, and signal reconstruction stages. The inclusion of adaptive peak detection and 4th-order Butterworth filters significantly improved overall performance and signal integrity.
+### 🔧 System Overview
+The AD/DA system consists of the following stages:
+
+- **4th-Order Butterworth Low-Pass Filters (LPF)**  
+  - Used as the **anti-aliasing filter** (input) and **reconstruction filter** (output)  
+  - Unity-gain configuration  
+  - Provides flat passband response and smooth signal reconstruction  
+  - Suppresses high-frequency noise and aliasing effects  
+
+- **Sample-and-Hold Circuit**  
+  - Captures the analog input at each clock cycle  
+  - Ensures stable signal levels during ADC conversion  
+
+- **Comparator-Based 2-bit ADC**  
+  - Implemented using LM358P op-amps and discrete comparators  
+  - Converts the sampled signal into 2-bit digital outputs  
+
+- **Resistor-Based DAC (Weighted Resistor / R-2R Type)**  
+  - Reconstructs the analog signal from the 2-bit digital output  
+
+- **Reconstruction Low-Pass Filter (4th-order Butterworth)**  
+  - Removes DAC step artifacts  
+  - Smoothens the analog output waveform  
+
+---
+
+### 📈 Adaptive Peak Detection
+An **adaptive peak detection circuit** was integrated to enhance conversion accuracy.
+
+Benefits:
+- More stable quantization levels  
+- Reduced error during 2-bit threshold detection  
+- Improved reconstructed output quality  
+
+---
+
+### 🛠️ Components Used
+- LM358P operational amplifiers  
+- 4th-order unity-gain Butterworth filters  
+- Comparators  
+- MOSFETs for switching  
+- Weighted resistor network / R-2R DAC  
+- Peak detector circuit components  
+
+---
+
+### 🧪 Verification & Testing
+
+**Simulation Testing**
+- Verified frequency response of filters  
+- Checked comparator switching thresholds  
+- Tested sampling behavior and DAC output waveform  
+
+**Breadboard Testing**
+- Real hardware validation  
+- Measured ADC thresholds and DAC levels  
+- Confirmed LPF response and reconstructed signal performance  
+
+---
+
+### 📌 Outcome
+Task 1 successfully demonstrates a complete **2-bit AD/DA conversion system**, including:
+
+- Anti-aliasing and reconstruction filtering  
+- Sample-and-hold operation  
+- Comparator-based ADC  
+- Resistor-based DAC  
+- Adaptive peak detection  
+- Full simulation and hardware validation  
+
+This establishes a reliable and accurate analog signal processing chain suitable for low-bit data conversion experiments.
+
 
 
 
