@@ -4,20 +4,14 @@ In this task, a complete 2-bit Analog-to-Digital (ADC) and Digital-to-Analog (DA
 🔧 System Overview
 
 The AD/DA system was developed with the following major components:
-
 •	4th-Order Butterworth Low-Pass Filters (LPF)
-
 Used at both the input (anti-aliasing filter) and output (reconstruction filter) stages.
-
 These unity-gain Butterworth filters ensure:
-
-  o	Flat passband response
-  
+  o	Flat passband response 
   o	No ripple
-  
   o	Smooth signal reconstruction
-  
   o	Effective reduction of high-frequency noise and aliasing
+
 •	Sample-and-Hold Circuit
 Captures and holds the analog input signal for stable conversion during each clock cycle.
 •	Comparator-based 2-bit ADC
