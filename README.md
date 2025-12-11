@@ -1,5 +1,6 @@
 # Analog-to-Digital-and-Digital-to-Analog-Converter
-In Task 1, a complete 2-bit Analog-to-Digital (ADC) and Digital-to-Analog (DAC) conversion chain was designed, simulated, and tested on a breadboard. The system includes all major signal-processing stages required in a practical data-conversion pipeline.
+In this task, a complete 2-bit Analog-to-Digital (ADC) and Digital-to-Analog (DAC) conversion chain was designed, simulated, and tested on a breadboard. The system includes all major signal-processing stages required in a practical data-conversion pipeline.
+
 🔧 System Overview
 The AD/DA system was developed with the following major components:
 •	4th-Order Butterworth Low-Pass Filters (LPF)
