@@ -27,7 +27,6 @@ The AD/DA system consists of the following stages:
   - Removes DAC step artifacts  
   - Smoothens the analog output waveform  
 
----
 
 ### 📈 Adaptive Peak Detection
 An **adaptive peak detection circuit** was integrated to enhance conversion accuracy.
@@ -37,7 +36,6 @@ Benefits:
 - Reduced error during 2-bit threshold detection  
 - Improved reconstructed output quality  
 
----
 
 ### 🛠️ Components Used
 - LM358P operational amplifiers  
@@ -46,8 +44,6 @@ Benefits:
 - MOSFETs for switching  
 - Weighted resistor network / R-2R DAC  
 - Peak detector circuit components  
-
----
 
 ### 🧪 Verification & Testing
 
@@ -60,8 +56,6 @@ Benefits:
 - Real hardware validation  
 - Measured ADC thresholds and DAC levels  
 - Confirmed LPF response and reconstructed signal performance  
-
----
 
 ### 📌 Outcome
 Task 1 successfully demonstrates a complete **2-bit AD/DA conversion system**, including:
